@@ -1,0 +1,885 @@
+$Dark_Violet: hsl(256, 26%, 20%);
+$Grayish_Blue: hsl(216, 30%, 68%);
+
+// Neutral
+
+$Very_Dark_Violet: hsl(270, 9%, 17%);
+$Dark_Grayish_Violet: hsl(273, 4%, 51%);
+$Very_Light_Gray: hsl(0, 0%, 98%);
+
+
+// desktop version
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+//navbar
+.navbar {
+    position: relative;
+    padding: 0 10%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $Very_Light_Gray;
+    z-index: 2;
+
+    // hide humberger icon
+    .humberger {
+        display: none;
+    }
+
+    nav {
+        .backnav {
+            display: none;
+        }
+
+        ul {
+            text-transform: uppercase;
+            width: 400px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-family: 'Karla', sans-serif;
+            font-weight: 700;
+
+            .primary {
+                cursor: pointer;
+                padding: 10px 30px;
+                border: none;
+                background-color: transparent;
+                border: 2px solid $Dark_Violet;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+                color: $Dark_Violet;
+                border-radius: 2px;
+            }
+
+            // set when button clicked
+            .primary:active {
+                background-color: $Dark_Violet;
+                color: $Very_Light_Gray;
+            }
+
+            li a {
+                text-decoration: none;
+                color: $Dark_Grayish_Violet;
+            }
+
+            // set when list clicked
+            li a:active {
+                color: $Dark_Violet;
+            }
+        }
+    }
+}
+
+// Hero section
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-color: $Dark_Violet;
+
+    .intro {
+        img:last-Child {
+            display: block;
+            position: absolute;
+            top: 10%;
+            right: 8%;
+
+        }
+
+        // hide first-child in intro(Mobile-device)
+        img:first-Child {
+            display: none;
+        }
+    }
+
+    .head {
+        width: 100%;
+
+        .backleft {
+
+            // hide first-child in backleft(Mobile-device)
+            img:first-Child {
+                display: none;
+            }
+
+            img:last-Child {
+                display: block;
+                position: absolute;
+                top: 350px;
+            }
+        }
+
+        .backright {
+
+            // hide first-child in backright(Mobile-device)
+            img:first-Child {
+                display: none;
+            }
+
+            img:last-Child {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: -80px;
+
+            }
+        }
+
+        .heading::before {
+
+            content: "";
+            display: block;
+            width: 140px;
+            height: 1px;
+            background-color: $Very_Light_Gray;
+            margin-bottom: 50px;
+
+        }
+
+        .heading {
+            width: 59%;
+            padding: 5% 10%;
+            box-sizing: border-box;
+
+
+            h1 {
+                font-size: 60px;
+                margin-bottom: 10px;
+                color: $Very_Light_Gray;
+                font-size: 60px;
+                font-family: 'DM Serif Display', serif;
+                font-weight: 400;
+            }
+
+            p {
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-family: 'Karla', sans-serif;
+                font-weight: 400;
+                color: $Very_Light_Gray
+            }
+
+
+            .primary {
+                cursor: pointer;
+                padding: 10px 30px;
+                border: none;
+                background-color: $Dark_Violet;
+                border: 2px solid $Very_Light_Gray;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                color: $Very_Light_Gray;
+                z-index: -1;
+            }
+
+            .primary:active {
+                background-color: $Very_Light_Gray;
+                color: $Dark_Violet;
+            }
+        }
+    }
+}
+
+// Why section
+
+.why {
+    width: 100%;
+
+    margin-top: 250px;
+    margin-bottom: 100px;
+    padding: 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+
+        display: flex;
+        flex-direction: column;
+
+
+
+        hr {
+            width: 150px;
+            background-color: $Dark_Violet;
+            opacity: 0.5;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            font-size: 45px;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            color: $Dark_Violet
+        }
+    }
+
+    .list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .task {
+
+        margin-bottom: 20px;
+        margin-right: 20px;
+
+        h1 {
+            color: $Dark_Violet
+        }
+
+        p {
+            color: $Dark_Violet;
+            opacity: 0.5;
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+
+// Find section
+.find {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    box-sizing: border-box;
+
+    .find_out {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        padding: 0 10%;
+        box-sizing: border-box;
+        background-color: $Dark_Violet;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        .background {
+            img:first-Child {
+                display: none;
+            }
+
+            img:last-Child {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .heading {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+
+            h1 {
+                width: 50%;
+                color: $Very_Light_Gray;
+                font-size: 47px;
+                font-family: 'DM Serif Display', serif;
+                font-weight: 400;
+            }
+
+            .primary {
+                cursor: pointer;
+                padding: 10px 30px;
+                border: none;
+                background-color: transparent;
+                border: 2px solid $Very_Light_Gray;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                color: $Very_Light_Gray;
+            }
+
+            .primary:active {
+                color: $Dark_Violet;
+                background-color: $Very_Light_Gray;
+
+            }
+        }
+    }
+}
+
+// footer section
+footer {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+
+    .backgorund {
+        img:first-Child {
+            display: none;
+        }
+
+        img:last-Child {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .foot {
+        width: 100%;
+        padding: 0 10%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+
+        .logo_sosial {
+            width: 100%;
+            padding-top: 100px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .sosial {
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        hr {
+            margin: 30px 0;
+            color: $Dark_Violet;
+            opacity: 0.5;
+        }
+
+        .reference {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .daftar {
+                width: 100;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 16px;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: left;
+                margin-bottom: 30px;
+
+                p {
+                    color: $Dark_Grayish_Violet;
+                    margin-bottom: 30px;
+                }
+
+                span {
+                    ul {
+                        list-style-type: none;
+
+                        li {
+                            margin-bottom: 10px;
+
+                            a {
+                                font-size: 13px;
+                                text-decoration: none;
+                                color: $Dark_Violet;
+                            }
+
+                            a:active {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile desktop
+
+@media screen and (max-width:380px) {
+    * {
+        padding: 0;
+        margin: 0;
+
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        position: absolute;
+        z-index: 10;
+        box-sizing: border-box;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        .logo_humberger {
+            background-color: $Very_Light_Gray;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 2;
+
+            .humberger {
+                display: block;
+                z-index: 1;
+
+            }
+
+            .logo {
+                display: block;
+                z-index: 1;
+            }
+        }
+
+        nav.slide {
+            transform: translateX(0);
+        }
+
+        nav {
+            width: 100%;
+            height: 600px;
+            background-color: $Dark_Grayish_Violet;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(100%);
+            transition: all 1.5s;
+            z-index: -1;
+
+            .backnav {
+                display: block;
+                position: absolute;
+                bottom: 0;
+            }
+
+            ul {
+                margin-top: 90px;
+                padding: 0 5%;
+                box-sizing: border-box;
+                position: relative;
+                width: 100%;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                li {
+                    a {
+                        color: $Very_Light_Gray;
+
+                    }
+                }
+
+                .primary {
+                    width: 100%;
+                    padding: 15px;
+                    color: $Very_Light_Gray;
+                    border: 2px solid $Very_Light_Gray;
+                    background-color: $Dark_Grayish_Violet;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    // hero section
+    .hero {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        z-index: -1;
+
+
+        // set last child in intro div then hide it(desktop version)
+        .intro {
+            img:first-child {
+                width: 100%;
+                display: block;
+            }
+
+            img:last-child {
+                display: none;
+            }
+        }
+
+        .head {
+            position: relative;
+            margin-top: -4px;
+            width: 100%;
+            height: 300px;
+            background-color: $Dark_Violet;
+            z-index: -1;
+
+            .backleft {
+                img:first-Child {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+
+                // set last child in backleft div then hide it(desktop version)
+                img:last-child {
+                    display: none;
+                }
+            }
+
+            .backright {
+                img:first-Child {
+                    display: block;
+                    position: absolute;
+                    bottom: -200px;
+                    right: 0;
+                    z-index: -1;
+                }
+
+                // set last child in backleft div then hide it(desktop version)
+                img:last-Child {
+                    display: none;
+                }
+            }
+
+            .heading::before {
+                content: "";
+                display: none;
+            }
+
+            .heading {
+                width: 100%;
+                margin-top: 30px;
+                text-align: center;
+                padding: 0 5%;
+                box-sizing: border-box;
+
+
+
+                h1 {
+                    margin-bottom: 10px;
+                    color: $Very_Light_Gray;
+                    font-size: 40px;
+                    font-family: 'DM Serif Display', serif;
+                    font-weight: 400;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    font-family: 'Karla', sans-serif;
+                    font-weight: 400;
+                    color: $Very_Light_Gray
+                }
+
+                .primary {
+                    padding: 8px 30px;
+                    border: none;
+                    background-color: $Dark_Violet;
+                    border: 2px solid $Very_Light_Gray;
+                    font-family: 'Karla', sans-serif;
+                    font-weight: 700;
+                    color: $Very_Light_Gray;
+                    z-index: -1;
+                }
+            }
+
+
+
+        }
+    }
+
+    // why section
+
+    .why {
+        margin-top: 300px;
+        width: 100%;
+        height: 300px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+        box-sizing: border-box;
+        text-align: center;
+
+        .list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            hr {
+                width: 150px;
+                background-color: $Dark_Violet;
+                opacity: 0.5;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                margin-bottom: 50px;
+                font-size: 45px;
+                font-family: 'DM Serif Display', serif;
+                font-weight: 400;
+                color: $Dark_Violet
+            }
+        }
+
+        .task {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+
+            h1 {
+                color: $Dark_Violet;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $Dark_Violet;
+                opacity: 0.5;
+                font-family: 'Karla', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+
+            }
+        }
+    }
+
+    // start find section
+
+    .find {
+        margin-top: 700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 10%;
+        box-sizing: border-box;
+
+        .find_out {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background-color: $Dark_Violet;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+
+
+            .background {
+                img:first-Child {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    z-index: -1;
+                }
+
+                // hide last child in background(Desktop)
+                img:last-child {
+                    display: none;
+                }
+
+            }
+
+            // set last child in div background then hide it
+            .background :last-child {
+                display: none;
+            }
+
+            .heading {
+                width: 100%;
+                margin-top: 50px;
+                padding: 0 5%;
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                text-align: center;
+
+                h1 {
+                    width: 100%;
+                    font-size: 30px;
+                    font-family: 'DM Serif Display', serif;
+                    font-weight: 400;
+                    color: $Very_Light_Gray;
+                    margin-bottom: 30px;
+                }
+
+                .primary {
+                    padding: 8px 30px;
+                    border: none;
+                    background-color: $Dark_Violet;
+                    border: 2px solid $Very_Light_Gray;
+                    font-family: 'Karla', sans-serif;
+                    font-weight: 700;
+                    color: $Very_Light_Gray;
+                }
+            }
+        }
+    }
+
+    // footer section
+    footer {
+        position: relative;
+        margin-top: 100px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        // set backgorund
+        .backgorund {
+
+            img:first-Child {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            // set last child in backgorund div then hide it
+            img:last-Child {
+                display: none;
+
+            }
+        }
+
+        .foot {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            hr {
+                margin-top: 50px;
+            }
+
+            .logo_sosial {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                z-index: 1;
+
+                .logo {
+                    margin-bottom: 20px;
+                }
+
+                .sosial {
+
+                    width: 180px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        hr {
+            color: $Dark_Violet;
+            opacity: 0.5;
+            margin-bottom: 30px;
+        }
+
+        .reference {
+            width: 100%;
+            display: flex;
+            flex-direction: column !important;
+
+
+
+            .daftar {
+                width: 100;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 16px;
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center !important;
+                margin-bottom: 30px;
+
+                p {
+                    color: $Dark_Grayish_Violet;
+                    margin-bottom: 30px;
+                }
+
+                span {
+                    ul {
+                        list-style-type: none;
+
+                        li {
+                            margin-bottom: 10px;
+
+                            a {
+                                font-size: 13px;
+                                text-decoration: none;
+                                color: $Dark_Violet;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
